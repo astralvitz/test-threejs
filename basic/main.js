@@ -6,7 +6,7 @@ scene.background = new THREE.Color('#F0F0F0');
 
 // 2. Add the camera
 // 2nd argument, ASPECT sets the aspect ratio of screen
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(75, 4/3, 0.1, 1000);
 camera.position.z = 5;
 
 // 3. Create and add a cube object
@@ -23,7 +23,7 @@ scene.add(light);
 
 // 5. Set up the renderer
 const renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setSize(400, 300);
 document.body.appendChild(renderer.domElement);
 
 // 6. Animate the scene
