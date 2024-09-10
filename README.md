@@ -25,6 +25,9 @@ optionally add to rules `'react/no-unknown-property': 'off',`
 `import gsap from "gsap";`
 `import { useGSAP } from "@gsap/react";`
 
+### others
+`npm i maath`
+
 ## notes
 - convert GLTF files to jsx components https://gltf.pmnd.rs/
 - use react-window to not render out-of-view components
