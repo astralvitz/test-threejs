@@ -3,6 +3,8 @@ import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
 import HackerRoom from "../components/HackerRoom";
 import CanvasLoader from "../components/CanvasLoader";
+import { useMediaQuery } from "react-responsive";
+import { calculateSizes } from "../constants/index";
 
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 })
