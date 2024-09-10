@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
-import { Leva, useControls } from "leva";
 import HackerRoom from "../components/HackerRoom";
 import CanvasLoader from "../components/CanvasLoader";
 
