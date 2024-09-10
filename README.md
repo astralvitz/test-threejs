@@ -19,8 +19,16 @@ and
 `'@react-three': ReactThreeFiber,`
 optionally add to rules `'react/no-unknown-property': 'off',`
 
+### gsap
+`npm i @gsap/react gsap`
+
+`import gsap from "gsap";`
+`import { useGSAP } from "@gsap/react";`
+
 ## notes
 - convert GLTF files to jsx components https://gltf.pmnd.rs/
+- use react-window to not render out-of-view components
+- recreate my more obscure favorites. even if 50,000 people have seen something, there are 1,000,000,000+ people who haven't.
 
 ## ideas
 - Anju's room

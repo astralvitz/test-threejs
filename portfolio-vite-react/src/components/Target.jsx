@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 
 const Target = (props) => {
     const targetRef = useRef();
+    //todo replace
     const { scene } = useGLTF('https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/target-stand/model.gltf');
 
     useGSAP(() => {
