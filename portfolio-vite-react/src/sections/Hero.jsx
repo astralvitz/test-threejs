@@ -42,7 +42,8 @@ const Hero = () => {
       min: 0.1,
       max: 10 
     }
-  })
+  });
+  const isMobile = useMediaQuery({ maxWidth: 798 })
 
   return(
     <section className="min-h-screen w-full flex flex-col relative">
@@ -61,9 +62,9 @@ const Hero = () => {
               // scale={0.1} 
               // position={[0, 0, 0]} 
               // rotation={[0, Math.PI, 0]}
-              position={[x.positionX, x.positionY, x.positionZ]}
-              rotation={[x.rotationX, x.rotationY, x.rotationZ]}
-              scale={[x.scale, x.scale, x.scale]}
+              position={[2, -8, 2]}
+              rotation={[0, Math.PI, 0]}
+              scale={0.1}
             />
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
