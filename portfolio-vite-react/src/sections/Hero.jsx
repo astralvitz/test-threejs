@@ -6,7 +6,7 @@ import HackerRoom from "../components/HackerRoom";
 import CanvasLoader from "../components/CanvasLoader";
 
 const Hero = () => {
-  const x = useControls('Hacker Room', {
+  const controls = useControls('Hacker Room', {
     positionX: {
       value: 2.5,
       min: -10,
@@ -43,7 +43,12 @@ const Hero = () => {
       max: 10 
     }
   });
-  const isMobile = useMediaQuery({ maxWidth: 798 })
+  const isSmall = useMediaQuery({ maxWidth: 440 })
+  const isMobile = useMediaQuery({ maxWidth: 768 })
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 })
+
+  // gets constants from constants/index.js where the creator Adrien/JSM used Leva for a bit to position all the logs on all 4 of the screen sizes
+  const sizes = calculateSizes(isSmall, isMobile, isTablet);
 
   return(
     <section className="min-h-screen w-full flex flex-col relative">
@@ -64,7 +69,7 @@ const Hero = () => {
               // rotation={[0, Math.PI, 0]}
               position={[2, -8, 2]}
               rotation={[0, Math.PI, 0]}
-              scale={0.1}
+              scale={isMobile ? controls.scale : 0.1}
             />
             <ambientLight intensity={1} />
             <directionalLight position={[10, 10, 10]} intensity={0.5} />
